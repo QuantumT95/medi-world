@@ -26,6 +26,12 @@ h6 {
   letter-spacing: 0.1rem;
 }
 
+.py-5 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .bg-black {
   background-color: #000 !important;
 }
