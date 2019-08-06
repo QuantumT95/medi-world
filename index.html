@@ -20,15 +20,19 @@
 
   <!-- Custom styles for this template -->
   <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/fakeLoader.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+  <div id="fakeloader"></div>
+
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top wow bounceInUp" data-wow-delay="1.2s">
     <div class="container">
-      <a class="navbar-brand" href="#">World-Med 🌎</a>
+      <a class="navbar-brand" href="index.html">World-Med 🌎</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -78,9 +82,11 @@
   <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
-        <h1 class="masthead-heading mb-0">World-Med</h1>
-        <h3 class="masthead-subheading mb-0">Providing quality health care around the world</h2>
-          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+        <h1 class="masthead-heading mb-0 wow bounceInRight" data-wow-delay="1.2s">World-Med</h1>
+        <h3 class="masthead-subheading mb-0 wow bounceInLeft" data-wow-delay="1.2s">Providing quality health care around
+          the world</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5 wow bounceInDown"
+            data-wow-delay="1.2s">Learn More</a>
       </div>
     </div>
   </header>
@@ -195,6 +201,19 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/fakeLoader.min.js"></script>
+  <script>
+    new WOW().init();
+    $(document).ready(function () {
+      $.fakeLoader({
+        timeToHide: 1200,
+        bgColor: "#ff5177",
+        spinner: "spinner1"
+      });
+    });
+  </script>
+  <div class="fakeLoader"></div>
 
 </body>
 
